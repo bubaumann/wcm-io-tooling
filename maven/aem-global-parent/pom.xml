@@ -289,6 +289,7 @@
             <goals>
               <goal>validate</goal>
             </goals>
+            <phase>generate-sources</phase>
           </execution>
         </executions>
         <configuration>
@@ -297,6 +298,8 @@
             <include>**/*.html</include>
           </includes>
           <failOnWarnings>true</failOnWarnings>
+          <generateJavaClasses>true</generateJavaClasses>
+          <generatedJavaClassesPrefix>org.apache.sling.scripting.sightly</generatedJavaClassesPrefix>
           <allowedExpressionOptions>
             <!-- AEM-specific HTL expression options -->
             <option>wcmmode</option>
